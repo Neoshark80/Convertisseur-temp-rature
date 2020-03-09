@@ -8,41 +8,33 @@ public class convertisseurDegresFahrenheit {
 	}
 
 	private static void convertisseur() {
-		char retry = 'o', conversionSouhaitÈ = 0;
+		char retry = 'o', conversionSouhait√© = 0;
 		double temperatureAConvertir = 0, resultatEnFahrenheit = ((int) temperatureAConvertir * 1.8 + 32),
-				resultatEnDegrÈs = (((int) temperatureAConvertir - 32) / 1.8);
+				resultatEnDegr√©s = (((int) temperatureAConvertir - 32) / 1.8);
 		Scanner sc = new Scanner(System.in);
-		try {
 			while (retry == 'o' || retry == 'O') {
 				System.out
-						.println("Choisissez votre convertion :\n 1_ DegrÈs -> Fahrenheit \n 2_ Fahrenheit -> DegrÈs");
-				conversionSouhaitÈ = sc.nextLine().charAt(0);
-				if (conversionSouhaitÈ == '1') {
-					System.out.println("TempÈrature ‡ convertir en Fahrenheit");
+						.println("Choisissez votre convertion :\n 1_ Degr√©s -> Fahrenheit \n 2_ Fahrenheit -> Degr√©s");
+				conversionSouhait√© = sc.nextLine().charAt(0);
+				if (conversionSouhait√© == '1') {
+					System.out.println("Temp√©rature √† convertir en Fahrenheit");
 					temperatureAConvertir = sc.nextInt();
 					System.out.println(resultatEnFahrenheit);
 					sc.nextLine();
 					System.out.println("Voulez vous re-essayer? (O/N)");
 					retry = sc.nextLine().charAt(0);
-				} else if (conversionSouhaitÈ == '2') {
-					System.out.println("TempÈrature ‡ convertir en Celcius");
+				} else if (conversionSouhait√© == '2') {
+					System.out.println("Temp√©rature √† convertir en Celcius");
 					temperatureAConvertir = sc.nextInt();
-					System.out.println(resultatEnDegrÈs);
+					System.out.println(resultatEnDegr√©s);
 					sc.nextLine();
 					System.out.println("Voulez vous re-essayer? (O/N) ");
 					retry = sc.nextLine().charAt(0);
 				} else {
-					System.out.println("Je ne comprend pas votre rÈponse");
+					System.out.println("Je ne comprend pas votre r√©ponse");
 					System.out.println("Voulez vous re-essayer? (0/N)");
 					retry = sc.nextLine().charAt(0);
-				}
-			}
-		}
-
-		catch (NumberFormatException e) {
-			System.out.println("All arguments should be provided as numbers");
-			System.exit(-1);
-
+	
 		}
 	}
 }
