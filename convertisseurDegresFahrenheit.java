@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class convertisseurDegresFahrenheit {
@@ -19,7 +18,7 @@ public class convertisseurDegresFahrenheit {
 					System.out.println("Température à convertir en Fahrenheit");
 					temperatureEnString = sc.nextLine();
 					temperatureAConvertirEnF = Integer.parseInt(temperatureEnString);
-					double resultatEnFahrenheit = ((int) temperatureAConvertirEnF * 1.8 + 32);
+					double resultatEnFahrenheit = (temperatureAConvertirEnF * 1.8 + 32);
 					System.out.println(resultatEnFahrenheit);
 				} catch (NumberFormatException e) {
 					System.out.println("Veuillez entrer une valeur numérique\n");
